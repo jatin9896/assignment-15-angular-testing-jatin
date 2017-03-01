@@ -52,7 +52,7 @@ describe('ShowComponent', function () {
         [{
           date: '',
           title: '',
-          description: '',
+          description: 'd1',
           priority: '',
           _id: ''
         }]
@@ -62,7 +62,7 @@ describe('ShowComponent', function () {
     expect(comp.detail).toEqual([{
       date: '',
       title: '',
-      description: '',
+      description: 'd1',
       priority: '',
       _id: ''
     }])

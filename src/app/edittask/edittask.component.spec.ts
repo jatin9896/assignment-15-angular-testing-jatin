@@ -55,13 +55,14 @@ class MockActivatedRoute{
           date: '',
           title: '',
           description: '',
-          priority: '',
+          priority: 9,
           _id: ''
         }]
       )
     );
     comp.edit("","","",9,event);
     expect(window.alert).toHaveBeenCalledWith('updated data');
+     
     router.navigate([]).then(data => {
       expect(data).toBe(true);
     })
