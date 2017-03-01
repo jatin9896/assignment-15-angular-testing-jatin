@@ -43,7 +43,7 @@ describe('ShowComponent', function () {
     router = fixture.debugElement.injector.get(Router);
   });
 
-  it('should create component', () => expect(comp).toBeDefined());
+  it('should create show component', () => expect(comp).toBeDefined());
 
 
   it('it should get data from service', () => {

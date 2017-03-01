@@ -43,7 +43,7 @@ export class Edittaskcomponent implements OnInit {
  }
 
  edit(date: string, title: string, desc: string, priority: number, event: Event) {
-  event.preventDefault();
+  //event.preventDefault();
   console.log("edit call")
   this.temp.id=this.index
   this.temp.date=this.detailfield.date
