@@ -1,0 +1,61 @@
+<h1> Create Task
+</h1>
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-sm-2">Date:</label>
+    <div class="col-sm-6">
+      <input class="form-control" placeholder="Date" #date>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Title:</label>
+    <div class="col-sm-6"> 
+      <input class="form-control" placeholder="Title" #title>
+    </div>
+  </div>
+    <div class="form-group">
+    <label class="control-label col-sm-2" >Description:</label>
+    <div class="col-sm-6"> 
+      <input class="form-control" placeholder="Description" #desc>
+    </div>
+  </div>
+    <div class="form-group">
+    <label class="control-label col-sm-2" >Priority:</label>
+    <div class="col-sm-6"> 
+      <input class="form-control"  placeholder="Priority" #priority>
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default" (click)="submit(date.value,title.value,desc.value,priority.value)">Submit</button>
+    </div>
+  </div>
+</form>
+<h1>Task List </h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Date</th>
+    <th>Description</th>
+    <th>Priority</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let d of detail let i=index">
+    <td>{{d.title}}</td>
+    <td>{{d.date}}</td>
+    <td>{{d.description}}</td>
+    <td>{{d.priority}}</td>
+  </tr>
+  </tbody>
+</table>
